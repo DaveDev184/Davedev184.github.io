@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+#rosasCanvas {
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+#btnGenerar {
+  margin-top: 16px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #ff6fa5; /* rosado */
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#btnGenerar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(255, 111, 165, 0.6);
+  background: #ffa3c7;
+}
+
+.dedicatoria {
+  margin-top: 6px;
+  font-size: 11px; /* letra pequeña */
+  color: #ffc7dd;
+  letter-spacing: 0.05em;
+}
