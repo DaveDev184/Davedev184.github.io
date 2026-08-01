@@ -2,23 +2,123 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Rosas para Emily</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosas para Bonita</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Rosas</h1>
 
-    <canvas id="rosasCanvas" width="800" height="800"></canvas>
+  <!-- Pantalla 1: sobre con corazones cayendo -->
+  <section id="screenEnvelope" class="screen active">
+    <div id="heartsBg" class="hearts-bg"></div>
+    <div class="envelope-content">
+      <img src="img/entrega-flores.png" alt="" class="entrega-flores" />
+      <canvas id="envelopeCanvas" class="pixel-canvas envelope-canvas" width="48" height="36"></canvas>
+      <p class="pixel-label">♡ Carta para Maria!! ♡</p>
+    </div>
+  </section>
 
-    <!-- Botón: al hacer clic se generan las rosas -->
-    <button id="btnGenerar">Generar rosas</button>
+  <!-- Pantalla 2: pregunta -->
+  <section id="screenQuestion" class="screen">
+    <div class="retro-window">
+      <div class="retro-titlebar">
+        <span>LOVE</span>
+        <span class="retro-controls">— □ ×</span>
+      </div>
+      <div class="retro-hearts-row">
+        <span class="mini-heart">♥</span><span class="mini-dot">•</span>
+        <span class="mini-heart">♥</span><span class="mini-dot">•</span>
+        <span class="mini-heart">♥</span>
+      </div>
+      <div class="retro-body">
+        <p class="pixel-question">Gracias por llegar hasta aquí.</p>
+        <img src="img/spidercat-detalle.png" alt="" class="cat-illustration" />
+        <button id="btnYes" class="retro-btn continue-btn">Continuar ♡</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Mensaje en letra pequeña -->
-    <p class="dedicatoria">
-      para Emily
-    </p>
-  </div>
+  <!-- Pantalla 3: carta -->
+  <section id="screenLetter" class="screen">
+    <div class="retro-window">
+      <div class="retro-titlebar">
+        <span>LOVE</span>
+        <span class="retro-controls">— □ ×</span>
+      </div>
+      <div class="retro-hearts-row">
+        <span class="mini-heart">♥</span><span class="mini-dot">•</span>
+        <span class="mini-heart">♥</span><span class="mini-dot">•</span>
+        <span class="mini-heart">♥</span>
+      </div>
+      <div class="retro-body carta-body">
+        <div class="carta-scroll">
+          <h2 class="carta-titulo">Para María 🌻</h2>
+
+          <p class="carta-texto">Querida María:</p>
+
+          <p class="carta-texto">Hoy es 1 de agosto, un día en el que muchas personas regalan flores para recordarle a alguien lo especial que es.</p>
+
+          <p class="carta-texto">Me habría encantado poder entregárselas personalmente. Poder verla sonreír mientras las recibe y decirle todo esto frente a frente. Pero, por ahora, la distancia decidió que estas flores viajaran de una manera diferente. Por eso hice este pequeño espacio para usted.</p>
+
+          <p class="carta-texto">Sé que no somos pareja.</p>
+
+          <p class="carta-texto">Y precisamente por eso quería que cada palabra que leyera fuera sincera. No busco hacer promesas que aún no nos corresponden, ni apresurar algo que merece su tiempo. Solo quiero decirle lo que muchas veces pienso cuando hablamos.</p>
+
+          <p class="carta-texto">Me gusta conocerla.</p>
+
+          <p class="carta-texto">Me gusta descubrir un poco más de usted en cada conversación, escucharla, reír con usted y terminar el día con la sensación de que hablarle siempre vale la pena.</p>
+
+          <p class="carta-texto">Y hay detalles de usted que, aunque parezcan pequeños, para mí son imposibles de ignorar.</p>
+
+          <p class="carta-texto">Sus ojos tienen una calma difícil de explicar. Cada vez que veo una fotografía suya o la miro durante una videollamada, termino pensando que podría quedarme observándolos mucho más tiempo del que debería.</p>
+
+          <p class="carta-texto">Y sus lunares... quizá para usted sean solo una parte más de su rostro, pero para mí son esos pequeños detalles que la hacen única. Son como esas estrellas diminutas que uno descubre cuando observa el cielo con atención: no todos las notan, pero cuando las descubre, ya no puede dejar de admirarlas.</p>
+
+          <p class="carta-texto">No sé qué nos tenga preparado el futuro.</p>
+
+          <p class="carta-texto">No sé si algún día podré llegar con un ramo de flores de verdad y entregárselo personalmente.</p>
+
+          <p class="carta-texto">Lo que sí sé es que conocerla ha sido una de esas coincidencias que agradezco profundamente.</p>
+
+          <p class="carta-texto">Quiero seguir conociéndola, seguir compartiendo momentos con usted y dejar que el tiempo haga lo suyo, sin prisas y sin presiones, porque creo que las cosas bonitas merecen construirse con calma.</p>
+
+          <p class="carta-texto">Hoy estas flores son una pequeña forma de decirle que alguien, aunque esté lejos, piensa en usted con una sonrisa.</p>
+
+          <p class="carta-texto">Y que, entre todas las personas con las que pude haber coincidido, me alegra muchísimo que haya sido usted.</p>
+
+          <p class="carta-texto">Gracias por estar aquí.</p>
+
+          <p class="carta-texto">Espero que este detalle le robe una sonrisa, aunque sea por unos minutos.</p>
+
+          <p class="carta-texto">Feliz 1 de agosto, María.</p>
+
+          <p class="carta-texto carta-firma">Con mucho cariño,<br /><strong>Dave</strong> 🌻</p>
+
+          <p class="carta-texto carta-cita">"La distancia puede impedirme entregarle flores con mis propias manos, pero nunca impedirá que encuentre una manera de recordarle lo especial que es para mí."</p>
+        </div>
+        <button id="btnVerFlores" class="retro-btn ver-flores-btn">Ver flores ♡</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pantalla 4: flores -->
+  <section id="screenFlowers" class="screen">
+    <div class="container">
+      <div class="ramo-escena">
+        <canvas id="ramoCanvas"></canvas>
+      </div>
+
+      <a href="img/rosas-bonitas.png" download="RosasParaBonita.png" class="descargar-btn">Guardar un recuerdo ♡</a>
+
+      <!-- Mensaje en letra pequeña -->
+      <p class="dedicatoria">
+        para Maria
+      </p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
